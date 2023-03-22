@@ -12,9 +12,13 @@
       const urlParams = new URLSearchParams(queryString);
       const url = urlParams.get('uniqure_redirect_uri') || null;
       //   const code = urlParams.get('code') || null;
-      if (url) {
-        console.log(url);
-        window.location.replace(url);
+      try {
+        const uri = decodeURIComponent(url);
+        if (uri) {
+          window.location.replace(uri);
+        }
+      } catch (error) {
+        console.log(error);
       }
     </script>
   </body>
