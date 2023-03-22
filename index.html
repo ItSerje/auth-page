@@ -10,7 +10,7 @@
     <script>
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      const url = urlParams.get('unique_url') || null;
+      const url = urlParams.get('uniqure_redirect_uri') || null;
       //   const code = urlParams.get('code') || null;
       if (url) {
         window.location.replace(url);
