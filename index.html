@@ -8,11 +8,11 @@
   <body>
     <!-- <div>Test</div> -->
     <script>
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const url = urlParams.get('uniqure_redirect_uri') || null;
       //   const code = urlParams.get('code') || null;
       try {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const url = urlParams.get('uniqure_redirect_uri') || null;
         const uri = decodeURIComponent(url);
         if (uri) {
           window.location.replace(uri);
